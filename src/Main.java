@@ -24,35 +24,35 @@ public class Main {
         Random random = new Random();
         int numAleatorio;
         long inicio, fin, duracionLista, duracionArbol;
-        ArrayList<Long> TiempoLista = new ArrayList<>();
-        ArrayList<Long> TiempoArbol = new ArrayList<>();
-        ArrayList<Integer> Numero = new ArrayList<>();
+        //ArrayList<Long> TiempoLista = new ArrayList<>();
+        //ArrayList<Long> TiempoArbol = new ArrayList<>();
+        //ArrayList<Integer> Numero = new ArrayList<>();
 
         // Realizar 500 búsquedas con números aleatorios
         for (int i = 0; i < 500; i++) {
             numAleatorio = random.nextInt(10001); // Generar un número aleatorio entre 0 y 5000
-            Numero.add(numAleatorio);
+            //Numero.add(numAleatorio);
 
             // Medir el tiempo de búsqueda en la lista enlazada
             inicio = System.nanoTime();
             lista.buscar(numAleatorio);
             fin = System.nanoTime();
             duracionLista = fin - inicio;
-            TiempoLista.add(duracionLista);
+            //TiempoLista.add(duracionLista);
 
             // Medir el tiempo de búsqueda en el árbol binario de búsqueda
             inicio = System.nanoTime();
             arbol.buscar(numAleatorio);
             fin = System.nanoTime();
             duracionArbol = fin - inicio;
-            TiempoArbol.add(duracionArbol);
-/*
+            //TiempoArbol.add(duracionArbol);
+
             // Imprimir el número buscado y los tiempos de búsqueda
             System.out.println((i + 1) + ". Número a buscar: " + numAleatorio);
             System.out.println("    Tiempo lista: " + duracionLista + " ns");
-            System.out.println("    Tiempo árbol: " + duracionArbol + " ns");*/
+            System.out.println("    Tiempo árbol: " + duracionArbol + " ns");
         }
-
+        /*
         for (int i = 0; i < Numero.size(); i++) {
             System.out.println(Numero.get(i));
         }
@@ -64,7 +64,6 @@ public class Main {
         for (int i = 0; i < TiempoArbol.size(); i++) {
             System.out.println(TiempoArbol.get(i));
         }
-
-
+        */
     }
 }
